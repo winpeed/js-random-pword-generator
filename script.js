@@ -85,12 +85,17 @@ const allCharacters = [
 
 const randomText = document.getElementsByClassName("random-text");
 const generateBtn = document.getElementById("btn-gen");
+const clearBtn = document.getElementById("btn-clear");
+const wordText = document.getElementById("word-text");
 
 //Length of Array
 const ARRLENGTH = allCharacters.length - 1;
 
-//Event listener for generate button
+//Event Listener for generate button
 generateBtn.addEventListener("click", assignPassword);
+
+//Event Listener for for clear button
+clearBtn.addEventListener("click", clearFields);
 
 //Event Listener to Copy Text
 for (let i = 0; i < randomText.length; i++) {
@@ -124,6 +129,14 @@ function copyText(event) {
   /* Copy the text inside the text field */
   navigator.clipboard.writeText(event.target.value);
 
-  /* Alert the copied text */
-  alert("Text Copied: " + event.target.value);
+  if (event.target.value == "") {
+    alert("No password has been generated. Generate at least one first!");
+  } else {
+    /* Alert the copied text */
+    alert("Text Copied!");
+  }
+}
+
+function clearFields() {
+  location.reload();
 }

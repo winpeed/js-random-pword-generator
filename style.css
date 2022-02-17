@@ -29,10 +29,11 @@ p {
   --dark-green: #10b981;
   --text-white: #ffffff;
   --color-line: #2f3e53;
+  --color-red: #e11d48;
 }
 
 main {
-  padding: 8em 1em 4em 1em;
+  padding: 6em 1em 4em 1em;
   background: var(--bg-blue);
 }
 
@@ -59,18 +60,25 @@ main {
   padding: 0.7em 0em 3.5em 0em;
 }
 
-.top button {
+button {
   font-size: 1.2rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background: var(--dark-green);
-  color: var(--text-white);
-  padding: 0.5em 1.5em;
+  padding: 0.8em 1.5em;
   font-family: var(--font-two);
   border-radius: 5px;
   border: none;
   cursor: pointer;
+  color: var(--text-white);
+}
+
+.top button {
+  background: var(--dark-green);
+}
+
+.bottom button {
+  background: var(--color-red);
 }
 
 .top button img {
@@ -98,14 +106,29 @@ main {
   border: none;
   padding: 0.8em 1em 0.8em 1em;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 1.2rem;
   letter-spacing: 0.04em;
   cursor: pointer;
 }
 
+.bottom textarea::placeholder {
+  color: var(--dark-green);
+  font-size: 1.1rem;
+  font-family: var(--font-two);
+}
+
+.bottom textarea {
+  grid-column: 1 / -1;
+  font-size: 1.1rem;
+  background: var(--input-blue);
+  color: var(--dark-green);
+  font-weight: 500;
+  border-radius: 6px;
+  border-radius: 6px;
+  border: none;
+  min-height: 150px;
+  padding: 0.8em 1em 0.8em 1em;
+}
 footer {
   text-align: center;
   background: var(--text-gray);
