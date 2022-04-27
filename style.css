@@ -37,29 +37,6 @@ main {
   background: var(--bg-blue);
 }
 
-.top {
-  min-height: 33vh;
-}
-
-.top h1 {
-  font-family: var(--font-two);
-  font-size: 2.2rem;
-  color: var(--text-white);
-  font-weight: 800;
-}
-
-.top h1 span {
-  color: var(--light-green);
-  display: block;
-}
-
-.top p {
-  color: var(--text-gray);
-  font-size: 1.2rem;
-  font-family: var(--font-two);
-  padding: 0.7em 0em 3.5em 0em;
-}
-
 button {
   font-size: 1.2rem;
   display: flex;
@@ -73,15 +50,29 @@ button {
   color: var(--text-white);
 }
 
-.top button {
+.top {
+  min-height: 33vh;
+}
+.top__heading {
+  font-family: var(--font-two);
+  font-size: 2.2rem;
+  color: var(--text-white);
+  font-weight: 800;
+}
+.top__heading span {
+  color: var(--light-green);
+  display: block;
+}
+.top__description {
+  color: var(--text-gray);
+  font-size: 1.2rem;
+  font-family: var(--font-two);
+  padding: 0.7em 0em 3.5em 0em;
+}
+.top__button {
   background: var(--dark-green);
 }
-
-.bottom button {
-  background: var(--color-red);
-}
-
-.top button img {
+.top__button img {
   fill: var(--text-white);
 }
 
@@ -90,13 +81,9 @@ button {
   grid-template-columns: repeat(2, 44%);
   grid-gap: 1.5em;
 }
-
-.bottom input::placeholder {
-  color: var(--dark-green);
-  font-size: 1.6rem;
-  font-family: var(--font-two);
+.bottom__button {
+  background: var(--color-red);
 }
-
 .bottom input {
   background: var(--input-blue);
   font-family: var(--font-two);
@@ -110,15 +97,23 @@ button {
   letter-spacing: 0.04em;
   cursor: pointer;
 }
-
-.bottom textarea::placeholder {
+.bottom input::-moz-placeholder {
   color: var(--dark-green);
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   font-family: var(--font-two);
 }
-
+.bottom input:-ms-input-placeholder {
+  color: var(--dark-green);
+  font-size: 1.6rem;
+  font-family: var(--font-two);
+}
+.bottom input::placeholder {
+  color: var(--dark-green);
+  font-size: 1.6rem;
+  font-family: var(--font-two);
+}
 .bottom textarea {
-  grid-column: 1 / -1;
+  grid-column: 1/-1;
   font-size: 1.1rem;
   background: var(--input-blue);
   color: var(--dark-green);
@@ -129,6 +124,22 @@ button {
   min-height: 150px;
   padding: 0.8em 1em 0.8em 1em;
 }
+.bottom textarea::-moz-placeholder {
+  color: var(--dark-green);
+  font-size: 1.1rem;
+  font-family: var(--font-two);
+}
+.bottom textarea:-ms-input-placeholder {
+  color: var(--dark-green);
+  font-size: 1.1rem;
+  font-family: var(--font-two);
+}
+.bottom textarea::placeholder {
+  color: var(--dark-green);
+  font-size: 1.1rem;
+  font-family: var(--font-two);
+}
+
 footer {
   text-align: center;
   background: var(--text-gray);
@@ -159,12 +170,11 @@ footer {
     max-width: 600px;
   }
 
-  .top h1 {
+  .top__heading {
     font-size: 3.2rem;
   }
-
-  .top p {
+  .top__description {
     font-size: 2rem;
     padding: 0.7em 0em 2.5em 0em;
   }
-}
+}/*# sourceMappingURL=style.css.map */
